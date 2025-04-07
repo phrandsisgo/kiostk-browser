@@ -16,7 +16,7 @@ time.sleep(3)
 # 3. Starte ein zweites Firefox-Fenster (für Monitor)
 subprocess.Popen([
     r"C:\Program Files\Mozilla Firefox\firefox.exe",
-    "--new-window",
+    "--kiosk",
     "https://www.emuseum.ch/de/projection/screen"
 ])
 
