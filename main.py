@@ -33,7 +33,7 @@ else:
 
 windows = gw.getWindowsWithTitle("seite-fuer-monitor")  # Passe den Tab-Titel an
 if windows:
-    win = windows[0]
+    win = windows[1]
     win.moveTo(1920, 0)
 else:
     print("Fenster nicht gefunden")
