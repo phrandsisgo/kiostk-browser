@@ -7,7 +7,7 @@ import pygetwindow as gw
 subprocess.Popen([
     r"C:\Program Files\Mozilla Firefox\firefox.exe",
     "--kiosk",
-    "https://seite-fuer-touchscreen.de"
+    "https://www.emuseum.ch/de/projection"
 ])
 
 # 2. Warte ein paar Sekunden
@@ -17,11 +17,11 @@ time.sleep(3)
 subprocess.Popen([
     r"C:\Program Files\Mozilla Firefox\firefox.exe",
     "--new-window",
-    "https://seite-fuer-monitor.de"
+    "https://www.emuseum.ch/de/projection/screen"
 ])
 
 # 4. Warte, bis das Fenster geladen ist
-time.sleep(7)
+time.sleep(5)
 
 # 5. Aktiviere das Fenster und drücke F11
 windows = gw.getWindowsWithTitle("seite-fuer-monitor")  # Passe den Tab-Titel an
