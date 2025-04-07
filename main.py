@@ -11,7 +11,7 @@ subprocess.Popen([
 ])
 
 # 2. Warte ein paar Sekunden
-time.sleep(3)
+time.sleep(2)
 
 # 3. Starte ein zweites Firefox-Fenster (für Monitor)
 subprocess.Popen([
@@ -23,19 +23,6 @@ subprocess.Popen([
 
 # 4. Warte, bis das Fenster geladen ist
 time.sleep(5)
-
-# 5. Aktiviere das Fenster und drücke F11
-windows = gw.getWindowsWithTitle("seite-fuer-monitor")  # Passe den Tab-Titel an
-if windows:
-    win = windows[0]
-    win.activate()
-    time.sleep(1)
-    pyautogui.press('f11')
-else:
-    print("Fenster nicht gefunden")
-
-# Optional: Fenster gezielt auf Monitor 2 verschieben
-# Beispiel: win.moveTo(x=1920, y=0)  # Falls Monitor 2 rechts ist
 
 # Setze die Koordinaten für die Fenster
 windows = gw.getWindowsWithTitle("seite-fuer-touchscreen")  # Passe den Tab-Titel an
@@ -51,3 +38,17 @@ if windows:
     win.moveTo(1920, 0)
 else:
     print("Fenster nicht gefunden")
+    
+# 5. Aktiviere das Fenster und drücke F11
+windows = gw.getWindowsWithTitle("seite-fuer-monitor")  # Passe den Tab-Titel an
+if windows:
+    win = windows[0]
+    win.activate()
+    time.sleep(1)
+    pyautogui.press('f11')
+else:
+    print("Fenster nicht gefunden")
+
+# Optional: Fenster gezielt auf Monitor 2 verschieben
+# Beispiel: win.moveTo(x=1920, y=0)  # Falls Monitor 2 rechts ist
+
