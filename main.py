@@ -17,6 +17,7 @@ time.sleep(3)
 subprocess.Popen([
     r"C:\Program Files\Mozilla Firefox\firefox.exe",
     "--kiosk",
+    "--new-window",
     "https://www.emuseum.ch/de/projection/screen"
 ])
 
